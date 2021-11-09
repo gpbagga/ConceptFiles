@@ -10,7 +10,11 @@ cat <path_url.pub>    #enter and you will get the key and add it to your github 
 git push origin master
 git status  # just to see if there is any change in this folder in local computer
 
-# TO push new added files in project
+######### TO push new added files in project
 git add .
 git commit -m "<message>"
 git push origin master
+
+######## ERROR: error: failed to push some refs to 'git@github.com:myrepo.git'
+Your origin repository is ahead of your local repository. You'll need to pull down changes from the origin repository as follows before you can push.
+command : git pull origin master
