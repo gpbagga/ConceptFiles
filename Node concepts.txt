@@ -1,0 +1,74 @@
+//////Executing Javascript code or Node project///////////
+node filename.js            // this command executes the code and loads the module in computer processor instead of a browser 
+//////////////////////
+
+//////////nodemon//////////
+using nodemon instead of node like -> nodemon app.js 
+will reflect the saved changes instead of executing the node command again and again
+///////////////////
+
+
+///////IMPROTANT about node///////
+Node is a C++ program that have environment to give objects and v8 engine (used by Chrome) to execute javascript code
+/////////////////
+
+///////////global objects and functions by node/////
+global -> global object available in node apps
+console.log or global.console.log
+setTimeout() or global.setTimeout()
+clearTimeout() or global.clearTimeout()
+setInterval() or global.setInterval()
+clearInterval() or global.clearInterval()
+////////////////////
+
+//////NOTE: variables and functions in js files are not global or put into global object given by node because they are just limited to respective js file///////////
+
+/////////Node Modular System///////
+Each .js file in node app is a module called main module accesed by the object 'module' (only available inside module) (e.g. console.log(module))
+and variables and functions in that module are not available outside of the module
+To give access to them you have to explicitly export them.
+
+//////Exporting a variable or function or making it public in CJS//////
+module.exports.variableName = variable
+module.exports.funcName = function
+or
+module.exports = variable or function
+
+///////Loading a module and accessing their public fields//////////
+const moduleObj = require('./filename')
+or
+const variableName = require('./filename')..........in case if we exported variable directly
+
+////////////////////////
+
+/////////require()////////
+require() can take relative path to a filename or built-in modules of node as its parameter
+//////////////
+
+///////////REST Api////////////
+A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the 
+constraints of REST architectural style and allows for interaction with RESTful web services.
+To know more, check https://www.youtube.com/watch?v=SLwpqD8n3d0
+
+a request object has many props like params, headers, body etc.
+
+404 : status code of error - 'resource not found'
+200: status code of all ok
+
+///////////////////////////
+
+////You can convert cjs script to esm script by writing "type":"module" in package.json file
+
+
+//////////EXPRESS///////////////
+express() create an http server and returns an object which has different methods
+
+app.use(express.json())
+// express.json() returns a piece of middleware. app.use means we want to use middleware in request processing pipeline
+// So this statement automatically parses json object in request processing pipeline
+
+By default, 'req.body' is undefined, and is populated when you use body-parsing middleware such as express.json() or 
+express.urlencoded().
+
+
+/////////////////////

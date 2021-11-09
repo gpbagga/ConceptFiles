@@ -1,0 +1,2 @@
+///////INNER JOIN////////
+if one table is ordered by a field then joined table is also order by that same field

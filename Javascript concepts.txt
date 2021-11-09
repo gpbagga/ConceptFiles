@@ -1,0 +1,2 @@
+/////async functions/////
+they are executed as inline function to the statement before await statement

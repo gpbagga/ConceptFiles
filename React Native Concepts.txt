@@ -1,0 +1,45 @@
+///////////////////
+TO BUILD DEBUG apk
+Make sure you have already directory android/app/src/main/assets/, if not create directory, after that create new file and save as index.android.bundle and put your file in like this android/app/src/main/assets/index.android.bundle
+After that: 
+npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+
+cd android && ./gradlew assembleDebug
+
+Then you can get apk in app/build/outputs/apk/debug/app-debug.apk
+/////////////////
+
+/////Cleaning ReaCT nATIVE android project///////
+cd android and ./gradlew clean
+/////
+
+/////NAVIGATION CONCEPTS//////////
+Navigation actions are handled by current navigator and bubble up if couldn't be handled
+Drawer Navigator screens are always rendered but their state can vary if those screens are navigators
+reset action will make screens as it should
+////
+
+////DIMENSIONS in react native//////
+All dimensions in React Native are unitless, and represent density-independent pixels or points
+There is no universal mapping from points to physical units of measurement. 
+This means that a component with fixed dimensions might not have the same physical size, across different devices and screen sizes.
+However, this difference is unnoticable for most use cases.
+/////////////////////////////////////
+
+//////Difference b/w Context API and Redux//////
+Context - It re-renders all components whenever there is any update in the provider’s value prop. It is mainly used to share not manage
+Redux - It only re-render the updated components. It is used to share as well as manage
+
+/////flexbox////////
+NotSure: flexGrow, flexShrink works in the direction of flexDirection
+
+use flex only if you are using same values in flexGrow and flexShrink
+////////////
+
+//////adjusting FONT SIZE according to SPACE////////
+use properties:-
+numberOfLines = {1}
+adjustsFontSizeToFit = {true}
+
+and use flexShrink:1 in container(s)
+////////////////////////////////////
