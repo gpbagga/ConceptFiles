@@ -7,7 +7,13 @@ npx react-native bundle --platform android --dev false --entry-file index.js --b
 cd android && ./gradlew assembleDebug
 
 Then you can get apk in app/build/outputs/apk/debug/app-debug.apk
-/////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+//////////ERROR: Expiring Daemon because JVM heap space is exhausted/////////////
+Add the below lines into the gradle.properties file. Below memory size can be configured based on the RAM availability
+org.gradle.daemon=true
+org.gradle.jvmargs=-Xmx2560m
+//////////////////////////////////////////////
 
 /////Cleaning ReaCT nATIVE android project///////
 cd android and ./gradlew clean
