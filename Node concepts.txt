@@ -71,7 +71,7 @@ const variableName = require('./filename')..........in case if we exported varia
 require() can take relative path to a filename or built-in modules of node as its parameter
 //////////////
 
-///////////REST Api////////////
+/////REST Api////////////
 A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the 
 constraints of REST architectural style and allows for interaction with RESTful web services.
 To know more, check https://www.youtube.com/watch?v=SLwpqD8n3d0
@@ -81,6 +81,12 @@ a request object has many props like params, headers, body etc.
 404 : status code of error - 'resource not found'
 200: status code of all ok
 400: Bad Request
+
+'operations': 'Requests'
+Create: POST, 
+Read: GET, 
+Update: PUT,
+Delete: DELETE
 
 ///////////////////////////
 
