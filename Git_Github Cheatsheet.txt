@@ -15,7 +15,7 @@ git add .
 git commit -m "<message>"
 git push origin master
 
-###### To merge remote and local repository or to download changed files in local system repo
+###### To receive changes from remote repo or to download changed files
 git pull
 
 ######## CLONE a repository from github into local system
