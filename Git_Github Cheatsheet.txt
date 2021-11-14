@@ -21,7 +21,7 @@ git pull
 ######## CLONE a repository from github into local system
 Go to directory where you want repo to be stored and then open gitbash and type the below command:
 git clone <ssh_url_of_repo>
-#######NOTE: you need to first clone a github repo into your local system to push changes in github repo
+###### NOTE: you need to first clone a github repo into your local system to push changes in github repo
 
 
 ######## ERROR: error: failed to push some refs to 'git@github.com:myrepo.git'
