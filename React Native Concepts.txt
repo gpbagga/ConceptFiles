@@ -1,5 +1,8 @@
-///////////////////
-TO BUILD DEBUG apk
+////////TO CREATE NEW PROJECT://///////
+npx react-native init ProjectName
+//////////////////////////////////////
+
+/////// TO BUILD DEBUG apk ////////////
 Make sure you have already directory android/app/src/main/assets/, if not create directory, after that create new file and save as index.android.bundle and put your file in like this android/app/src/main/assets/index.android.bundle
 After that: 
 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
@@ -9,15 +12,32 @@ cd android && ./gradlew assembleDebug
 Then you can get apk in app/build/outputs/apk/debug/app-debug.apk
 //////////////////////////////////////////////////////////////////////////////
 
+/////EXISTING REACT NATIVE PROJECTS copied from another system or from GUTHUB/////
+1. Delete node_modules folder if it is present
+2. yarn install OR npm install
+3. ./gradlew clean
+4. npx react-native start
+5. npx react-native run-android
+///////////////////////////////////////////
+
+//////TO SEE if the mobile device is online and ready to install apk//////
+adb devices
+/////////////////
+
 //////////ERROR: Expiring Daemon because JVM heap space is exhausted/////////////
 Add the below lines into the gradle.properties file. Below memory size can be configured based on the RAM availability
 org.gradle.daemon=true
 org.gradle.jvmargs=-Xmx2560m
 //////////////////////////////////////////////
 
-/////Cleaning ReaCT nATIVE android project///////
+/////CLEANING ReaCT nATIVE android project///////
 cd android and ./gradlew clean
 /////
+
+/////TO INSTALL YARN package manager:///////
+Open Windows powershell as administrator
+run command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+/////////////////////////
 
 /////NAVIGATION CONCEPTS//////////
 Navigation actions are handled by current navigator and bubble up if couldn't be handled
@@ -35,12 +55,13 @@ However, this difference is unnoticable for most use cases.
 //////Difference b/w Context API and Redux//////
 Context - It re-renders all components whenever there is any update in the provider’s value prop. It is mainly used to share not manage
 Redux - It only re-render the updated components. It is used to share as well as manage
+/////////////////////////////////////////////////
 
-/////flexbox////////
+///// FLEXBOX ////////
 NotSure: flexGrow, flexShrink works in the direction of flexDirection
 
 use flex only if you are using same values in flexGrow and flexShrink
-////////////
+///////////////////////////////////////////////
 
 //////adjusting FONT SIZE according to SPACE////////
 use properties:-
@@ -48,4 +69,24 @@ numberOfLines = {1}
 adjustsFontSizeToFit = {true}
 
 and use flexShrink:1 in container(s)
-////////////////////////////////////
+
+////////
+If two texts are in one line and to ensure right one doesn't go outside of the view, 
+1. use flex property or give width to them in percentage
+2. use flexShrink: 1 to second item and use adjustFontSizeToFit = {true} prop to TEXT component
+///////
+
+/////<TEXT> props __ FONT/////////////
+
+allowFontScaling: true(default) or false--- Specifies whether fonts should scale to respect Text Size accessibility settings means should it scale if user set font size from the device settings
+
+adjustFontSizeToFit: true or false(default) ---Specifies whether fonts should be scaled down automatically to fit given style constraints. 
+It works well with style: {flexShrink: 1 }
+/////////
+
+//////////////////////////////////////////////////////
+
+
+////////React Native Picker///////////
+label of picker.item must be a string otherwise app will crash
+///////////////////////////////////////////////

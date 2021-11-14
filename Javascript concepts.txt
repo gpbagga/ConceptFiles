@@ -1,2 +1,34 @@
 /////async functions/////
 they are executed as inline function to the statement before await statement
+//////////////////////////////////
+
+
+//////////////Method definitions in objects/////////////////////////
+
+Whenver we define a function in class or object then it is called 'method'
+
+const obj = {
+  foo: function() {
+    // ...
+  },
+  bar: function() {
+    // ...
+  }
+}
+You are now able to shorten this to:
+const obj = {
+  foo() {
+    // ...
+  },
+  bar() {
+    // ...
+  }
+}
+////////////////////////////
+
+
+////////OOPS concept///////////
+CODE REUSABILITY is the reason behind INHERITANCE
+To extend or inherit a class means to use its properties and methods
+Object of child class can access public fields of super or extended class
+///////////////////////////////////////////////
