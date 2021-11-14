@@ -15,6 +15,10 @@ git add .
 git commit -m "<message>"
 git push origin master
 
+######## CLONE a repository from github into local system
+Go to directory where you want repo to be stored and then open gitbash and type the below command:
+git clone <ssh_url_of_repo>
+
 ######## ERROR: error: failed to push some refs to 'git@github.com:myrepo.git'
 Your origin repository is ahead of your local repository. You'll need to pull down changes from the origin repository as follows before you can push.
 command : git pull origin master
