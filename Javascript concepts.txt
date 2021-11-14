@@ -1,4 +1,4 @@
-/////async functions/////
+////async functions/////
 they are executed as inline function to the statement before await statement
 //////////////////////////////////
 
@@ -27,7 +27,7 @@ const obj = {
 ////////////////////////////
 
 
-////////OOPS concept///////////
+/////OOPS concept///////////
 CODE REUSABILITY is the reason behind INHERITANCE
 To extend or inherit a class means to use its properties and methods
 Object of child class can access public fields of super or extended class
