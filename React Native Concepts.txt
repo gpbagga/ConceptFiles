@@ -89,4 +89,14 @@ It works well with style: {flexShrink: 1 }
 
 ////////React Native Picker///////////
 label of picker.item must be a string otherwise app will crash
-///////////////////////////////////////////////
+/////////////////////////////////
+
+/////SCROLL VIEW//////
+overflow: 'hidden' does not work in scroll view. so if u set border radius, children will overlap that when we scroll.
+So solution is: wrap the scroll view in view and give it border radius and set overflow hidden
+//////////////////
+
+
+/////SHADOW_COLOR//////
+This property will only work on Android API 28 and above. For similar functionality on lower Android APIs, use the elevation property.
+////////////
