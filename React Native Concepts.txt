@@ -58,9 +58,11 @@ Redux - It only re-render the updated components. It is used to share as well as
 /////////////////////////////////////////////////
 
 ///// FLEXBOX ////////
-NotSure: flexGrow, flexShrink works in the direction of flexDirection
+flexGrow, flexShrink works in the direction of flexDirection
 
-use flex only if you are using same values in flexGrow and flexShrink
+use flex only if you are using same values in flexGrow and flexShrink (only in the case where component is the one and only child on which u are applying these props)
+
+Always try flex first in dividing the components. Then after, go with width or height percentage
 ///////////////////////////////////////////////
 
 //////adjusting FONT SIZE according to SPACE////////
@@ -82,6 +84,11 @@ allowFontScaling: true(default) or false--- Specifies whether fonts should scale
 
 adjustFontSizeToFit: true or false(default) ---Specifies whether fonts should be scaled down automatically to fit given style constraints. 
 It works well with style: {flexShrink: 1 }
+
+    ///lineHeight///
+    It is the height of text component. By default it is little bigger than fontSize so as to make sufficient space for text. 
+    It means by default text of text component has vertical padding
+
 /////////
 
 //////////////////////////////////////////////////////
