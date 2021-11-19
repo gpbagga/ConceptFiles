@@ -107,3 +107,8 @@ So solution is: wrap the scroll view in view and give it border radius and set o
 /////SHADOW_COLOR//////
 This property will only work on Android API 28 and above. For similar functionality on lower Android APIs, use the elevation property.
 ////////////
+
+
+///// Accessing Components///////
+give prop like: ref = {abcRef}
+to accesss it: abcRef.current      current property must be written to access components methods
