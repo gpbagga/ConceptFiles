@@ -24,6 +24,10 @@ Then you can get apk in app/build/outputs/apk/debug/app-debug.apk
 adb devices
 /////////////////
 
+////If you change ANDROID MANIFEST XML FILE////////
+uninstall app from device and build the app again
+////////////
+
 //////////ERROR: Expiring Daemon because JVM heap space is exhausted/////////////
 Add the below lines into the gradle.properties file. Below memory size can be configured based on the RAM availability
 org.gradle.daemon=true
