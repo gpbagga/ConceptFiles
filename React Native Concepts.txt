@@ -49,6 +49,13 @@ Drawer Navigator screens are always rendered but their state can vary if those s
 reset action will make screens as it should
 ////
 
+////Enabling SWIPE OR PAGING FEATURE IN SCROLLVIEW//////
+pagingEnabled = {true}
+When true, the scroll view stops on multiples of the scroll view's size when scrolling. This can be used for horizontal pagination.
+Note: Vertical pagination is not supported on Android.
+////////////////////////////////
+
+
 ////DIMENSIONS in react native//////
 All dimensions in React Native are unitless, and represent density-independent pixels or points
 There is no universal mapping from points to physical units of measurement. 
