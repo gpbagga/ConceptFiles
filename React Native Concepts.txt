@@ -105,6 +105,9 @@ It works well with style: {flexShrink: 1 }
 //////////////////////////////////////////////////////
 
 
+/////Use pressable instead of TouchableWithoutFeedback because the later is not working well//////////////
+
+
 ////////React Native Picker///////////
 label of picker.item must be a string otherwise app will crash
 /////////////////////////////////
