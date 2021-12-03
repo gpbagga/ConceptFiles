@@ -4,4 +4,19 @@ Notifications by FCM console go to those devices in which targeted app is in bac
 Notification will not be received if app is uninstalled
 
 On initial startup of your app, the FCM SDK generates a registration token for the client app instance.
-dasdsad
+
+////REACT NATIVE FCM//////
+
+//to receive full message---
+In foreground state: onMessage()
+In Background or Quit state: messaging().setBackgroundMessageHandler() in index.js file
+
+//to check if app is opened by pressing on a notification
+getInitialNotification(): When the application is opened from a quit state.
+onNotificationOpenedApp(): When the application is running, but in the background.
+These 2 listeners should be attached only one time to the app otherwise if they are attached 2 times then they cannot be removed
+
+//setBackgroundMessageHandler()
+this method creates a handler which will run if app is in background or even in killed state i.e. app is not running at all
+ON android only your handler code will be executed silently while your app is in killed state and your root component will not be mounted 
+ON IOS, your root React component also gets mounted i.e. your app starts silently. To get around this problem, https://rnfirebase.io/messaging/usage#background-application-state

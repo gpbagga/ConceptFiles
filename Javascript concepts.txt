@@ -32,3 +32,5 @@ CODE REUSABILITY is the reason behind INHERITANCE
 To extend or inherit a class means to use its properties and methods
 Object of child class can access public fields of super or extended class
 ///////////////////////////////////////////////
+
+/////CLOSURES in JAVASCRIPT //////////
