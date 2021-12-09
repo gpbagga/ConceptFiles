@@ -150,3 +150,44 @@ This property will only work on Android API 28 and above. For similar functional
 ///// Accessing Components///////
 give prop like: ref = {abcRef}
 to accesss it: abcRef.current      current property must be written to access components methods
+//////////////////////////////////
+
+
+//// Inline functions //////////
+Unlike normal function, they are created at runtime. For more info:
+https://www.geeksforgeeks.org/what-is-the-inline-function-in-javascript/
+////////////
+
+
+//// useCallback() /////
+useCallback(callbackFun, deps): given the same dependency values deps, the hook returns the same function instance between renderings (aka memoization):
+
+rendering creates new function objects:
+function MyComponent() {
+
+  // this function (object) will be created everytime MyComponent renders
+  const handleClick = () => {
+    // handle the click event
+  };
+  return <MyChild onClick={handleClick} />;
+}
+
+import { useCallback } from 'react';
+function MyComponent() {
+  
+  // handleClick is the same function object between rerenderings
+  const handleClick = useCallback(() => {
+    console.log('Clicked!');
+  }, []);
+  // ...
+}
+handleClick variable has always the same callback function object between renderings of MyComponent.
+But if the component which uses handleClick is small then Don't use useCallback() because small and light component does not cost performance if it is rendered on every render of parent component
+
+/////////////////////////////////////////////////
+
+///// useFocusEffect //////////
+it is not same as useEffect but somewhat similar to it.
+useCallback() inside useEffect and useFocusEffect behaves differently. 
+In useFocusEffect, The effect will run when screen comes to focus from unfocused state and whenever the dependencies passed to React.useCallback change, i.e. it'll run on initial render (if the screen is focused) as well as on subsequent renders if the dependencies have changed. If you don't wrap your effect in React.useCallback, the effect will run every render if the screen is focused.
+In useEffect, the effect will run everytime irrespective of change in dependencies in useCallback.

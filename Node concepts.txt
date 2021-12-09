@@ -128,3 +128,8 @@ express.urlencoded().
 
 ///////////////////////////////////////
 
+//// Inline functions //////////
+Unlike normal function, they are created at runtime. For more info:
+https://www.geeksforgeeks.org/what-is-the-inline-function-in-javascript/
+////////////
+

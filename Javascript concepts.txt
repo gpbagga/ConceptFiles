@@ -34,3 +34,21 @@ Object of child class can access public fields of super or extended class
 ///////////////////////////////////////////////
 
 /////CLOSURES in JAVASCRIPT //////////
+
+//// Inline functions //////////
+Unlike normal function, they are created at runtime. For more info:
+https://www.geeksforgeeks.org/what-is-the-inline-function-in-javascript/
+////////////
+
+
+//// Functions are like objects. They can be different even if their contents are same because of reference inequality/////////
+function factory() {
+  return (a, b) => a + b;
+}
+const sum1 = factory();
+const sum2 = factory();
+sum1(1, 2); // => 3
+sum2(1, 2); // => 3
+sum1 === sum2; // => false     because factory() creates and returns new function object everytime it runs
+sum1 === sum1; // => true
+//////
