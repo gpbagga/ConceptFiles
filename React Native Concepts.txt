@@ -191,3 +191,15 @@ it is not same as useEffect but somewhat similar to it.
 useCallback() inside useEffect and useFocusEffect behaves differently. 
 In useFocusEffect, The effect will run when screen comes to focus from unfocused state and whenever the dependencies passed to React.useCallback change, i.e. it'll run on initial render (if the screen is focused) as well as on subsequent renders if the dependencies have changed. If you don't wrap your effect in React.useCallback, the effect will run every render if the screen is focused.
 In useEffect, the effect will run everytime irrespective of change in dependencies in useCallback.
+/////////////////////////////////////
+
+///// REDUX TOOLKIT /////
+emptyUserSelection: (state, action) => {
+
+      // state = initialState or {...initialState}  // this will not work
+      for(const key in state){
+        state[key] = initialState[key]
+      }
+      
+},
+we cannot change reference of state object but we can change its content by mutating its properties.
