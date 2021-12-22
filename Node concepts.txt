@@ -18,6 +18,9 @@ when we call emit method, emitter object iterates over all registered listeners 
 to make package.json file write: npm init --yes
 ///////////////
 
+//// fs (filesystem) /////
+path should be like : fs.readFile("./config.js",callback);
+/////////////
 
 ///axios////
 axios.get('/user/12345')

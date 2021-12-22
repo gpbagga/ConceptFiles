@@ -24,6 +24,19 @@ Then you can get apk in app/build/outputs/apk/debug/app-debug.apk
 adb devices
 /////////////////
 
+//// ERRORS //////
+ Error: Reanimated 2 failed to create a worklet, maybe you forgot to add Reanimated's babel plugin?, js engine: hermes 
+	yarn start --reset-cache
+ERROR  Invariant Violation: Module AppRegistry is not a registered callable module (calling runApplication). A frequent cause of the error is that the application entry file path is incorrect.
+some dependency for library is not installed so install that
+
+ERROR: app is crashing by itself and no log of error 
+	Solution: delete build folder in android/app 
+
+////////////////
+
+
+
 ////If you change ANDROID MANIFEST XML FILE////////
 uninstall app from device and build the app again
 ////////////
@@ -55,6 +68,10 @@ When true, the scroll view stops on multiples of the scroll view's size when scr
 Note: Vertical pagination is not supported on Android.
 ////////////////////////////////
 
+//// SECURITY/STORING CREDENTIALS//////
+Never store sensitive API keys in your app code. Anything included in your code could be accessed in plain text by anyone inspecting the app bundle./////////
+DO NOT USE AsyncStorage TO STORE CREDENTIALS!
+////////////////////////////////////
 
 ////DIMENSIONS in react native//////
 All dimensions in React Native are unitless, and represent density-independent pixels or points
@@ -69,7 +86,7 @@ Redux - It only re-render the updated components. It is used to share as well as
 /////////////////////////////////////////////////
 
 ///// FLEXBOX ////////
-flexGrow, flexShrink works in the direction of flexDirection
+flexShrink property is very good to prevent overflow of content out of view
 
 use flex only if you are using same values in flexGrow and flexShrink (only in the case where component is the one and only child on which u are applying these props)
 
