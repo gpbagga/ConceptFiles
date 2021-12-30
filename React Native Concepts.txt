@@ -106,6 +106,35 @@ If two texts are in one line and to ensure right one doesn't go outside of the v
 2. use flexShrink: 1 to second item and use adjustFontSizeToFit = {true} prop to TEXT component
 ///////
 
+///// accessing props or state values of previous render/////////
+//custom hook
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {              // useEffect's effect will run after usePrevious function returns ref.current
+    ref.current = value;
+  });
+  return ref.current;
+}
+
+const Component = (props) => {
+    const {receiveAmount, sendAmount } = props
+    const prevAmount = usePrevious({receiveAmount, sendAmount});
+    useEffect(() => {
+        if(prevAmount.receiveAmount !== receiveAmount) {
+         // process here
+        }
+    }, [receiveAmount, sendAmount])
+}
+///////////////////////////////
+
+/// setting same value of state will not cause rerender ////////////
+/// since objects are always different so setting a {} everytime will cause rerender /////////
+/// creating a forceUpdate function ///////
+const [, updateState] = React.useState();
+const forceUpdate = React.useCallback(() => updateState({}), []);
+///////
+
+
 /////<TEXT> props __ FONT/////////////
 
 allowFontScaling: true(default) or false--- Specifies whether fonts should scale to respect Text Size accessibility settings means should it scale if user set font size from the device settings
@@ -205,7 +234,6 @@ But if the component which uses handleClick is small then Don't use useCallback(
 
 ///// useFocusEffect //////////
 it is not same as useEffect but somewhat similar to it.
-useCallback() inside useEffect and useFocusEffect behaves differently. 
 In useFocusEffect, The effect will run when screen comes to focus from unfocused state and whenever the dependencies passed to React.useCallback change, i.e. it'll run on initial render (if the screen is focused) as well as on subsequent renders if the dependencies have changed. If you don't wrap your effect in React.useCallback, the effect will run every render if the screen is focused.
 In useEffect, the effect will run everytime irrespective of change in dependencies in useCallback.
 /////////////////////////////////////
