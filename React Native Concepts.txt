@@ -56,6 +56,9 @@ Open Windows powershell as administrator
 run command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 /////////////////////////
 
+//// when using flatlist your item of list should be pure component or should implement shouldComponentUpdate or else they will render a lot more time than expected//////
+// in functional components , use React.memo(listItem)
+
 /////NAVIGATION CONCEPTS//////////
 Navigation actions are handled by current navigator and bubble up if couldn't be handled
 Drawer Navigator screens are always rendered but their state can vary if those screens are navigators
