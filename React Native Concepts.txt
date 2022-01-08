@@ -108,6 +108,10 @@ If two texts are in one line and to ensure right one doesn't go outside of the v
 1. use flex property or give width to them in percentage
 2. use flexShrink: 1 to second item and use adjustFontSizeToFit = {true} prop to TEXT component
 ///////
+/// useRef ////
+"Refs provide a way to access DOM nodes or React elements created in the render method"
+this is for react. it consists of div like components which are DOM nodes or React elements/components
+////
 
 ///// accessing props or state values of previous render/////////
 //custom hook

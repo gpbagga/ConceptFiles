@@ -1,2 +1,28 @@
+/// To start/stop a mysql server///////
+Stop the MySQL server if it is running. For a server that is running as a Windows service, go to the Services manager: From the Start menu, select Control Panel, then Administrative Tools, then Services. Find the MySQL service in the list and stop it.
+
+If your server is not running as a service, you may need to use the Task Manager to force it to stop.
+
+Start the mysql server if it is not running. follow above navigation process to start it as windows service
+//////////////////
+
+///changing mysql server password//////
+go to mysql workbench and open that mysql server connection
+execute: 
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password'
+//////////////
+
+
+/// NodeJS connecting with mySql///
+1. start mysql server
+2. use mysql library in node js and connect with username and password of mysql server
+
+ERROR: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+SOLUTION: go to mysql workbench and open connection to that mysql server and execute these commands:\
+	1. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+	2. flush privileges;
+//////////////
+
 ///////INNER JOIN////////
 if one table is ordered by a field then joined table is also order by that same field
+///
