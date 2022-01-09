@@ -1,0 +1,4 @@
+////// node filename.js ////////
+sudo su (go to super user)
+node filename.js
+/////////
