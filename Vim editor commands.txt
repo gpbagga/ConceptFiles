@@ -1,0 +1,9 @@
+//// to come out of insert mode ///
+press Esc
+//////
+
+//////
+:w - saves the file you are working on
+:wq - Save your file and close Vim
+:q! - Quit without first saving the file you were working on
+/////
