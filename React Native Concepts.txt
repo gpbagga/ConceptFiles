@@ -265,4 +265,6 @@ When a component is wrapped in React.memo(), React renders the component and mem
 this is like shouldComponentUpdate()
 React.memo(component, areEqual)
 if areEqual returns true then component doesn't render with the new props so this means component doesn't get new props
+
+Always wrap Item of flatlist in React.memo() because otherwise item with same props will be re-rendered on scroll 
 ///////////
