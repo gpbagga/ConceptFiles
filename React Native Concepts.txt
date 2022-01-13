@@ -263,7 +263,7 @@ we cannot change reference of state object but we can change its content by muta
 
 //// React.memo() ////
 
-When deciding to update DOM, React first renders your component, then compares the result with the previous render. If the render results(results means props functions and all that) are different, React updates the DOM.
+When deciding to update DOM, React first renders your component, then compares the result with the previous render. If the render results(results means child component props , value and all that) are different, React updates the DOM.
 When a component is wrapped in React.memo(), React renders the component and memoizes the result. Before the next render, if the new props are the same, React reuses the memoized result skipping the next rendering.
 
 this is like shouldComponentUpdate()
