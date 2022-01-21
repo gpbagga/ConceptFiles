@@ -63,15 +63,20 @@ run command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricte
 //// when using flatlist your item of list should be pure component or should implement shouldComponentUpdate or else they will render a lot more time than expected//////
 // in functional components , use React.memo(listItem)
 
-/////NAVIGATION CONCEPTS//////////
+/////React NAVIGATION CONCEPTS//////////
 Navigation actions are handled by current navigator and bubble up if couldn't be handled
 Drawer Navigator screens are always rendered but their state can vary if those screens are navigators
 reset action will make screens as it should
 
+<<<<<<< HEAD
 The replace action allows to replace a route in the navigation state. It takes the following arguments:
 
 name - string - A destination name of the route that has been registered somewhere.
 params - object - Params to pass to the destination route.
+=======
+ALWAYS MAKE DRAWER NAVIGATOR BE THE PARENT NAVIGATOR in case of nesting navigators so that drawer appears in full screen
+REASON: If a drawer navigator is nested inside of another navigator that provides some UI, for example a tab navigator or stack navigator, then the drawer will be rendered below the UI from those navigators. The drawer will appear below the tab bar and below the header of the stack.
+>>>>>>> b3731eb4d1a2d84c553b4b30f9560e532c881331
 ////
 
 ////Enabling SWIPE OR PAGING FEATURE IN SCROLLVIEW//////
@@ -150,6 +155,7 @@ const [, updateState] = React.useState();
 const forceUpdate = React.useCallback(() => updateState({}), []);
 ///////
 
+/// FlatList's renderItem receives different reference of item every time the functional component renders whether the data prop is same ///////
 
 /////<TEXT> props __ FONT/////////////
 
@@ -264,3 +270,16 @@ emptyUserSelection: (state, action) => {
       
 },
 we cannot change reference of state object but we can change its content by mutating its properties.
+////////////
+
+//// React.memo() ////
+
+When deciding to update DOM, React first renders your component, then compares the result with the previous render. If the render results(results means child component props , value and all that) are different, React updates the DOM.
+When a component is wrapped in React.memo(), React renders the component and memoizes the result. Before the next render, if the new props are the same, React reuses the memoized result skipping the next rendering.
+
+this is like shouldComponentUpdate()
+React.memo(component, areEqual)
+if areEqual returns true then component doesn't render with the new props so this means component doesn't get new props
+
+Always wrap Item of flatlist in React.memo() because otherwise item with same props will be re-rendered on scroll 
+///////////
