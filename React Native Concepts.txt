@@ -36,6 +36,10 @@ ERROR: app is crashing by itself and no log of error
 ////////////////
 
 
+//// setState() ////////////
+The second argument to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered.
+//////
+
 
 ////If you change ANDROID MANIFEST XML FILE////////
 uninstall app from device and build the app again
@@ -63,6 +67,11 @@ run command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricte
 Navigation actions are handled by current navigator and bubble up if couldn't be handled
 Drawer Navigator screens are always rendered but their state can vary if those screens are navigators
 reset action will make screens as it should
+
+The replace action allows to replace a route in the navigation state. It takes the following arguments:
+
+name - string - A destination name of the route that has been registered somewhere.
+params - object - Params to pass to the destination route.
 ////
 
 ////Enabling SWIPE OR PAGING FEATURE IN SCROLLVIEW//////
