@@ -1,0 +1,9 @@
+1. Hexadecimal numbers(from hackerearth)
+	We can simply check all numbers in the range [L,R] converting them into hexadecimal and then computing the GCD of that number and the its sum of digits.
+	Converting a number into hexadecimal take O(LogN) time.
+	Computing the GCD takes amortised O(LogN) time.
+	Therefore total time complexity will be : O(N * LogN * LogN).
+	Reference: 
+		https://codility.com/media/train/10-Gcd.pdf
+		https://www.youtube.com/watch?v=B5HKW99AvV0 (proof of Euclid's algorithm)
+		https://www.geeksforgeeks.org/time-complexity-of-euclidean-algorithm/
