@@ -5,19 +5,28 @@
 10. CartDetailsAfterLogin screen: give heading as: Workshop availability time slots:
 12. shadow of image card in progress card
 14. fetch stripe publishable key from server
-15.DONE-- notification sent error handling, token expire handling. delete token if notification send to token failed(very important in case user deletes the app without log out)
 
-LATEST-- coupon should not be applied before login
-DESIGN: 
-drawer, notification, wallet, booking done screen
+LATEST: 
+add car screen
+error in fetching transactions design
+price details modal ui
+
 
 VENDOR
-// credentials is in async storage. change it as it is not safe
-
+// calendar should be displayed on editing date fields
 
 
 TO READ:
-react.memo    refer to our usage in vendor app and refer to https://stackoverflow.com/questions/60054630/react-native-tab-view-on-tapping-on-tabs-transition-is-very-slow-but-on-swipe-i
-              and https://dmitripavlutin.com/use-react-memo-wisely/
-
 what is shallow comparison
+
+
+
+////ZOHO////
+print and mail button fixed on top
+sendMail
+attachFile
+
+attachment rename facility
+
+
+
