@@ -283,3 +283,29 @@ if areEqual returns true then component doesn't render with the new props so thi
 
 Always wrap Item of flatlist in React.memo() because otherwise item with same props will be re-rendered on scroll 
 ///////////
+
+
+/// Adding CDN to React projects //////////
+Add the CDN normally in Your index.html file and then in Your React component use window.* where the star is the name of the function to access this function. For example if this CDN has a function countSomething() You invoke it by using window.countSomething().
+/////////////////////
+
+////////////////////////
+To get SHA 1 and SHA 256 fingerprints.
+keytool -list -v -keystore "path to debug.keystore" -alias androiddebugkey
+
+To generate them :
+keytool -genkey -v -keystore debug.keystore -alias androiddebugkey
+-storepass android -keypass android -keyalg RSA -validity 14000
+
+////////////////
+
+//// Connecting React Native and Local Node.js server /////////
+1. I got my ip address from cmd using ipconfig 2. In node js, I wrote the server listening code like this
+
+const hostname = "192.168.2.103";
+const port = "3002";
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
+Now the app will run on this ip address instead of localhost and hence we can access it anywhere on the same network even in React Native fetching from APIs process
+/////////////////////////////

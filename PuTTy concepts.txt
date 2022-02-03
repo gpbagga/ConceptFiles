@@ -2,3 +2,15 @@
 sudo su (go to super user)
 node filename.js
 /////////
+
+/// kill a process ///
+
+pm2 kill
+
+or find the running PM2 process with:
+
+ps aux | grep PM2
+then kill with:
+kill -9 [pid]
+
+//////////////////

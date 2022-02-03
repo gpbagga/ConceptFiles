@@ -136,3 +136,14 @@ Unlike normal function, they are created at runtime. For more info:
 https://www.geeksforgeeks.org/what-is-the-inline-function-in-javascript/
 ////////////
 
+/////////////////////////
+One big difference between Node.js modules and browser JavaScript is how one script's code is accessed from another script's code.
+
+In browser JavaScript, scripts are added via the <script> element. When they execute, they all have direct access to the global scope, a "shared space" among all scripts. Any script can freely define/modify/remove/call anything on the global scope.
+
+In Node.js, each module has its own scope. A module cannot directly access things defined in another module unless it chooses to expose them. To expose things from a module, they must be assigned to exports or module.exports. For a module to access another module's exports or module.exports, it must use require().
+////////////////////////////////////
+
+///// serve-index //////////
+expressApp.use('/', serveIndex('app'));   
+serveIndex means serve index file in 'app' directory like index.html
