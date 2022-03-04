@@ -2,7 +2,6 @@
 Node is a C++ program that have environment to give objects and v8 engine (used by Chrome) to execute javascript code
 /////////////////
 
-
 //////Executing Javascript code or Node project///////////
 node filename.js            // this command executes the code and loads the module in computer processor instead of a browser 
 //////////////////////
@@ -147,3 +146,58 @@ In Node.js, each module has its own scope. A module cannot directly access thing
 ///// serve-index //////////
 expressApp.use('/', serveIndex('app'));   
 serveIndex means serve index file in 'app' directory like index.html
+////////
+
+//// Node Project Structure or architecture ////
+
+app.js :-- our application entry point
+SrC
+-api-routes  :-- application routes
+-config      :-- environment variables
+-loaders	    :-- loaders for startup modules
+-models     :-- database models
+-services    :-- business logic
+-subscribers  :-- async task event handlers
+-scripts     :-- for long npm scripts
+
+///////////////
+
+//// kill port already in use /////
+command: netstat -ano | findstr :<PORT>
+You will get pid
+command: taskkill /PID <PID> /F
+///////////////
+
+//// file upload /////
+Client side code: 
+const blob = dataURLtoBlob(dataURIstring)
+      console.log(blob)
+      const formData = new FormData()
+      formData.append('avatar', blob, "hello.pdf")
+      axios.post('http://localhost:1000/profile', formData)
+      .then((res)=> console.log(res.data))
+
+Server side code: 
+Make uploads folder
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'})
+app.post('/profile', upload.single('avatar'), (req, res)=>{
+  console.log(req.file)
+  console.log('got file')
+  res.send('got file')
+})
+
+///////////////
+
+
+//// javascript arrays ///
+JavaScript has no associative arrays, just objects. Even JavaScript arrays are basically just objects, just with the special thing that the keys are numbers (0,1,...).
+
+So look at your code first:
+
+var myArray = []; // Creating a new array object
+myArray['a'] = 200; // Setting the attribute a to 200
+myArray['b'] = 300; // Setting the attribute b to 300
+It's important to understand that myArray['a'] = 200; is identical to myArray.a = 200;!
+/////////////////
+

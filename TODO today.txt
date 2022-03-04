@@ -7,14 +7,12 @@
 14. fetch stripe publishable key from server
 
 LATEST: 
-add car screen
 error in fetching transactions design
 price details modal ui
-
+Vendor more than one image in workshop details
 
 VENDOR
 // calendar should be displayed on editing date fields
-yoyoyoyo
 
 TO READ:
 what is shallow comparison

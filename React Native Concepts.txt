@@ -32,13 +32,7 @@ some dependency for library is not installed so install that
 
 ERROR: app is crashing by itself and no log of error 
 	Solution: delete build folder in android/app 
-
-////////////////
-
-
-//// setState() ////////////
-The second argument to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered.
-//////
+/////////////
 
 
 ////If you change ANDROID MANIFEST XML FILE////////
@@ -289,7 +283,7 @@ Always wrap Item of flatlist in React.memo() because otherwise item with same pr
 Add the CDN normally in Your index.html file and then in Your React component use window.* where the star is the name of the function to access this function. For example if this CDN has a function countSomething() You invoke it by using window.countSomething().
 /////////////////////
 
-////////////////////////
+///// signing the app///////////////////
 To get SHA 1 and SHA 256 fingerprints.
 keytool -list -v -keystore "path to debug.keystore" -alias androiddebugkey
 
@@ -309,3 +303,26 @@ app.listen(port, hostname, () => {
 });
 Now the app will run on this ip address instead of localhost and hence we can access it anywhere on the same network even in React Native fetching from APIs process
 /////////////////////////////
+
+//// kill port already in use /////
+command: netstat -ano | findstr :<PORT>
+You will get pid
+command: taskkill /PID <PID> /F
+///////////////
+
+//// setState() /////
+setState() can also take updater function that will be executed when setState is going to change state , it takes currentState as argument expects the new value of state in return
+    setState(currState => {
+		......
+		return newState1 
+	})
+    setState(currState => {            // here currState = newState
+		.....
+		return newState2
+	})
+
+setState(updater[, callback]) is an async function
+
+You can use await setState() to pause the execution until the state is changed
+
+/////////////

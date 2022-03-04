@@ -62,3 +62,19 @@ if (
     executeSomeCode();
 }
 //////
+
+//// throw ////
+Function ends its execution at the line where either "throw" or "return" keyword is written 
+And returns a value if return is used or returns error if throw is used
+////////////
+
+//// javascript arrays ///
+JavaScript has no associative arrays, just objects. Even JavaScript arrays are basically just objects, just with the special thing that the keys are numbers (0,1,...).
+
+So look at your code first:
+
+var myArray = []; // Creating a new array object
+myArray['a'] = 200; // Setting the attribute a to 200
+myArray['b'] = 300; // Setting the attribute b to 300
+It's important to understand that myArray['a'] = 200; is identical to myArray.a = 200;!
+/////////////////

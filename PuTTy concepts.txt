@@ -14,3 +14,8 @@ then kill with:
 kill -9 [pid]
 
 //////////////////
+
+/// macOS //////
+To connect to your remote server, go to terminal and go to folder where .pem key exists and write:
+Ssh -I <private-key-filename>.pem username@hostname
+/////////
