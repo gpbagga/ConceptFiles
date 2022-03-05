@@ -311,7 +311,10 @@ command: taskkill /PID <PID> /F
 ///////////////
 
 //// setState() /////
-setState() can also take updater function that will be executed when setState is going to change state , it takes currentState as argument expects the new value of state in return
+
+setState(newState/callback) is an async function
+
+setState() can also take updater function that will be executed when setState is going to change state, it takes currentState as argument expects the new value of state in return
     setState(currState => {
 		......
 		return newState1 
@@ -320,8 +323,6 @@ setState() can also take updater function that will be executed when setState is
 		.....
 		return newState2
 	})
-
-setState(updater[, callback]) is an async function
 
 You can use await setState() to pause the execution until the state is changed
 

@@ -7,3 +7,6 @@
 		https://codility.com/media/train/10-Gcd.pdf
 		https://www.youtube.com/watch?v=B5HKW99AvV0 (proof of Euclid's algorithm)
 		https://www.geeksforgeeks.org/time-complexity-of-euclidean-algorithm/
+
+2. F.Subarray Problem( from hackerearth)
+	use SLIDING WINDOW technique
